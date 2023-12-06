@@ -1,0 +1,16 @@
+version: '1.0'
+
+services:
+  app:
+    image: 'mts-eureka-server:latest'
+    build:
+      context: .
+    ports:
+      - "8762:8762"
+    container_name: mts-eureka-server
+    networks:
+      - geforce
+
+networks:
+  geforce:
+    external: false
